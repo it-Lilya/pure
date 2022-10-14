@@ -1,16 +1,16 @@
-// eslint-disable-next-line import/prefer-default-export
-export function dataPersons(_data) {
+export function dataPersons() {
+  const data = {
+    name: 'Маг',
+    health: 90,
+  };
   let result = 0;
-  if (_data.health > 50) {
-    // eslint-disable-next-line no-const-assign, no-unused-vars
+  if (data.health >= 50) {
     result = 'healthy';
   }
-  if (_data.health >= 15 && _data.health < 50) {
-    // eslint-disable-next-line no-const-assign
+  if (data.health >= 15 && data.health < 50) {
     result = 'wounded';
   }
-  if (_data.healht < 15) {
-    // eslint-disable-next-line no-const-assign, no-unused-vars
+  if (data.health < 15) {
     result = 'critical';
   }
   return result;
